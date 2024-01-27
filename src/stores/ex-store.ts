@@ -28,17 +28,6 @@ export const useMyStore = defineStore({
         console.error('Error adding document: ', error);
       }
     },
-    async getData(): Promise<DocumentData[]> {
-      try {
-        const querySnapshot = await getDocs(collection(db, 'users'));
-        const data = querySnapshot.docs.map((doc) => doc.data());
-        console.log('Data retrieved successfully: ', data);
-        return data;
-      } catch (error) {
-        console.error('Error getting documents: ', error);
-        return [];
-      }
-    },
     setUser(user: User) {
       this.user = user;
     },
