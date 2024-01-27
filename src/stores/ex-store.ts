@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 import { db } from 'src/boot/firebase';
-import { addDoc, collection, getDocs, DocumentData } from 'firebase/firestore';
+import { addDoc, collection} from 'firebase/firestore';
 
 interface User {
   email: string;
